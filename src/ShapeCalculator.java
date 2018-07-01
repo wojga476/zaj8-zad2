@@ -5,7 +5,7 @@ public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
         double wynik = 0;
         if (shape instanceof Circle) {
             Circle circle = (Circle) shape;
-            wynik = Math.PI * Math.pow(circle.getPromien1(), 2);
+            wynik = Math.PI * Math.pow(circle.getR1(), 2);
 
         } else if (shape instanceof Rectangle) {
             Rectangle rectangle = (Rectangle) shape;
@@ -19,7 +19,7 @@ public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
         double wynik = 0;
         if (shape instanceof Ball) {
             Ball ball = (Ball) shape;
-            wynik = (Math.pow(ball.getPromien(), 3)) * Math.PI * 4 / 3;
+            wynik = (Math.pow(ball.getR(), 3)) * Math.PI * 4 / 3;
         } else if (shape instanceof Cube) {
             Cube cube = (Cube) shape;
             wynik = Math.pow(cube.getY2() - cube.getX2(), 3);
@@ -36,10 +36,10 @@ public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
             System.out.printf("Prostokąt o bokach %d i %d ma pole %.3f%n", rectangle.getY2() - rectangle.getY1(), rectangle.getX3() - rectangle.getX2(), shapeArea(rectangle));
         } else if (shape instanceof Circle) {
             Circle circle = (Circle) shape;
-            System.out.printf("Okrąg o promieniu %.2f ma pole %.3f%n", circle.getPromien1(), shapeArea(circle));
+            System.out.printf("Okrąg o promieniu %.2f ma pole %.3f%n", circle.getR1(), shapeArea(circle));
         } else if (shape instanceof Ball) {
             Ball ball = (Ball) shape;
-            System.out.printf("Kula o promieniu %.2f ma objetość %.3f%n", ball.getPromien(), volume(ball));
+            System.out.printf("Kula o promieniu %.2f ma objetość %.3f%n", ball.getR(), volume(ball));
         } else if (shape instanceof Cube) {
             Cube cube = (Cube) shape;
             System.out.printf("Sześcian o długości boku %d ma objetość %.3f%n", cube.getY2() - cube.getX2(), volume(cube));

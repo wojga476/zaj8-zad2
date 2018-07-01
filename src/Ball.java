@@ -1,17 +1,17 @@
 public class Ball extends Shape3D{
-    private int promien;
+    private int r;
 
-    public Ball(int x1, int y1, int z1, int promien) {
+    public Ball(int x1, int y1, int z1, int r) {
         super(x1, y1, z1);
-        promien = promien;
+        r = r;
     }
 
-    public double getPromien() {
-        return promien;
+    public double getR() {
+        return r;
     }
 
-    public void setPromien(int promien) {
+    public void setR(int r) {
 
-        promien = promien;
+        r = r;
     }
 }
