@@ -19,7 +19,7 @@ public class ShapeCalculator extends LineCalc implements Calc2D, Calc3D {
         double wynik = 0;
         if (shape instanceof Ball) {
             Ball ball = (Ball) shape;
-            wynik = (Math.pow(ball.getR(), 3)) * Math.PI * 4 / 3;
+            wynik = (Math.pow(ball.getR(), 3)) * Math.PI * 4.0 / 3.0;
         } else if (shape instanceof Cube) {
             Cube cube = (Cube) shape;
             wynik = Math.pow(cube.getY2() - cube.getX2(), 3);
